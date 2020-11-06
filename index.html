@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <title>Tabulka</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <script src="./js/myScript.js"></script>
+</head>
+<body>
+    <section>
+        <label for="x-axis">Zadajte X:</label>
+        <input type="number" id="x-axis" name="x-axis" class="my-inputs" onchange="XaxisChanged()" min="1" max="9" step="1" value="5" onkeydown="if(event.key==='.' || event.key===','){event.preventDefault();}">
+        <p id="XerrMessage">X os musi byt CELE cislo od 1 do 9</p>
+        
+        <label for="y-axis">Zadajte Y:</label>
+        <input type="number" id="y-axis" name="y-axis" class="my-inputs" onchange="YaxisChanged()" min="1" max="9" step="1" value="5" onkeydown="if(event.key==='.' || event.key===','){event.preventDefault();}">
+        <p id="YerrMessage">Y os musi byt CELE cislo od 1 do 9</p>
+
+        <button id="submit-b" onclick="showModal()">Spusti</button>
+        
+    </section>
+    <div id="modal">
+        <!-- <button id="return-b" onclick="returnTo()">Naspäť</button> -->
+    </div>
+</body>
+</html>
